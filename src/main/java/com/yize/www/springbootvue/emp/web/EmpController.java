@@ -20,6 +20,7 @@ public class EmpController {
     @Autowired
     private EmpService empService;
 
+
     @RequestMapping("list")
     public PageModel list(PageModel pageModel, EmpModel empModel) {
         PageModel allEmp = empService.getAllEmp(empModel, pageModel);
@@ -96,4 +97,20 @@ public class EmpController {
         }
         return result;
     }
+    @RequestMapping("deleteEmp")
+    public Result deleteEmp(@RequestBody String[] ids){
+        Result result = new Result();
+        /*for(int i=0;i<ids.length;i++){
+            System.out.println(i);
+        }*/
+        try{
+            empService.deleteManyEmp(ids);
+            result.setMsg("批量删除成功");
+        }catch (Exception e){
+            result.setMsg("批量删除失败");
+            result.setState(false);
+        }
+        return result;
+
+
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 @Mapper
 public interface EmpModelMapper{
-    /* 查询总数据 */
+    /* 查询总数据!!!!!!!!! */
     @Select("select count(id) from emp")
     Long findCount ();
     /*=============================================================*/

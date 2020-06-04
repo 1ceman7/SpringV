@@ -84,22 +84,6 @@ public class EmpController {
     }
     @RequestMapping("deleteManyEmp")
     public Result deleteManyEmp(@RequestBody String[] ids){
-        int a = 1 ;
-        Result result = new Result();
-        /*for(int i=0;i<ids.length;i++){
-            System.out.println(i);
-        }*/
-        try{
-            empService.deleteManyEmp(ids);
-            result.setMsg("批量删除成功");
-        }catch (Exception e){
-            result.setMsg("批量删除失败");
-            result.setState(false);
-        }
-        return result;
-    }
-    @RequestMapping("deleteEmp")
-    public Result deleteEmp(@RequestBody String[] ids){
         Result result = new Result();
         /*for(int i=0;i<ids.length;i++){
             System.out.println(i);

@@ -84,6 +84,7 @@ public class EmpController {
     }
     @RequestMapping("deleteManyEmp")
     public Result deleteManyEmp(@RequestBody String[] ids){
+        int a = 1 ;
         Result result = new Result();
         /*for(int i=0;i<ids.length;i++){
             System.out.println(i);
@@ -99,6 +100,7 @@ public class EmpController {
     }
     @RequestMapping("deleteEmp")
     public Result deleteEmp(@RequestBody String[] ids){
+        int b = 2;
         Result result = new Result();
         /*for(int i=0;i<ids.length;i++){
             System.out.println(i);
@@ -111,6 +113,6 @@ public class EmpController {
             result.setState(false);
         }
         return result;
-
+    }
 
 }

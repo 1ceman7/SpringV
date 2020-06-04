@@ -100,7 +100,6 @@ public class EmpController {
     }
     @RequestMapping("deleteEmp")
     public Result deleteEmp(@RequestBody String[] ids){
-        int b = 2;
         Result result = new Result();
         /*for(int i=0;i<ids.length;i++){
             System.out.println(i);

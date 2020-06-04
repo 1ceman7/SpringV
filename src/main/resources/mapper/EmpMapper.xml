@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yize.www.springbootvue.emp.mapper.EmpModelMapper">
+    <!-- 查找总数
+    <select id="findCount" resultType="Long">
+        select count (id) from emp ;
+    </select>-->
+
+
+
+    <!-- 批量删除 -->
+    <delete id="deleteManyEmp" parameterType="java.lang.String">
+        <!-- delete from emp where id in(7789,7790) -->
+        <!-- forEach : 用来循环 collection : 用来指定循环的数据的类型 可以填的值有：array,list,map
+        item: 循环中为每个循环的数据指定一个别名
+        index : 循环中循环的下标
+        open : 开始 close : 结束 separator : 数组中元素之间的分隔符 -->
+        delete from emp where id in
+        <foreach collection="ids" item="item" index="no" open="("
+                 separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+</mapper>

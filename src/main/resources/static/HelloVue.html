@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的第一个VUE</title>
+</head>
+<body>
+<div id="app">
+    {{ msg }}
+</div>
+</body>
+</html>
+    <!--    引入VUE的js    -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app",  //定义一个作用范围
+        data:{      //用来给VUE实例定义一些相关数据
+            msg:"欢迎光临！！"
+        },
+    });
+
+</script>

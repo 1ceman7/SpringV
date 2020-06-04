@@ -97,7 +97,4 @@ public class EmpController {
         }
         return result;
     }
-    public void talk(){
-        System.out.println("11111");
-    }
 }
